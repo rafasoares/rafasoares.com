@@ -1,7 +1,8 @@
 export default defineAppConfig({
   global: {
     seo: {
-      titleTemplate: '%s - Rafael Soares',
+      description: '',
+      colorScheme: 'dark light',
     },
   },
 

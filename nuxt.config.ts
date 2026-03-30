@@ -6,6 +6,20 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
+  app: {
+    head: {
+      titleTemplate: '%s - Rafael Soares',
+
+      htmlAttrs: {
+        lang: 'en',
+      },
+
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+    },
+  },
+
   css: ['~/assets/css/main.css'],
 
   routeRules: {
