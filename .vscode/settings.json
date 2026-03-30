@@ -21,5 +21,11 @@
   "nuxtr.vueFiles.style.alwaysScoped": true,
   "nuxtr.vueFiles.style.defaultLanguage": "postcss",
   "vue.suggest.componentNameCasing": "alwaysKebabCase",
-  "vue.suggest.propNameCasing": "alwaysKebabCase"
+  "vue.suggest.propNameCasing": "alwaysKebabCase",
+  "eslint.rules.customizations": [
+    {
+      "rule": "@stylistic/*",
+      "severity": "info"
+    }
+  ]
 }
