@@ -1,0 +1,25 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "ui"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "['\"`]([^'\"`]*)['\"`]"
+    ]
+  ],
+  "nuxtr.defaultPackageManager": "pnpm",
+  "nuxtr.piniaFiles.defaultTemplate": "setup",
+  "nuxtr.vueFiles.firstTag": "script",
+  "nuxtr.vueFiles.style.addStyleTag": false,
+  "nuxtr.vueFiles.style.alwaysScoped": true,
+  "nuxtr.vueFiles.style.defaultLanguage": "postcss",
+  "vue.suggest.componentNameCasing": "alwaysKebabCase",
+  "vue.suggest.propNameCasing": "alwaysKebabCase"
+}
