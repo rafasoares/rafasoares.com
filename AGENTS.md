@@ -1,8 +1,8 @@
-# AGENTS.md — Portfolio (@rafasoares/site)
+# AGENTS.md — @rafasoares/rafasoares.com
 
 ## Project Overview
 
-Personal portfolio website for Rafael Soares, built with **Nuxt 4**, **Vue 3.5**, **Nuxt UI v4**, and **Tailwind CSS v4**. The site is a static/prerendered app using file-based routing, auto-imports, and the Nuxt UI component library for all UI elements.
+Personal and professional website for Rafael Soares, built with **Nuxt 4**, **Vue 3.5**, **Nuxt UI v4**, and **Tailwind CSS v4**. The site is a static/prerendered app using file-based routing, auto-imports, and the Nuxt UI component library for all UI elements.
 
 ## Tech Stack
 
