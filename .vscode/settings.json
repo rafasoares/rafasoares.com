@@ -27,5 +27,8 @@
       "rule": "@stylistic/*",
       "severity": "info"
     }
-  ]
+  ],
+  "vite.buildCommand": "pnpm build",
+  "vite.devCommand": "pnpm dev",
+  "vite.https": true
 }
