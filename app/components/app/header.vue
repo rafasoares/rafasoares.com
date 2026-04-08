@@ -13,7 +13,7 @@
           variant="ghost"
           color="neutral"
           icon="i-tabler-brand-github"
-          to="https://github.com/rafasoares/rafasoares"
+          to="https://github.com/rafasoares/rafasoares.com"
           target="_blank"
           aria-label="Github"
         />
