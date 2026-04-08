@@ -30,5 +30,6 @@
   ],
   "vite.buildCommand": "pnpm build",
   "vite.devCommand": "pnpm dev",
-  "vite.https": true
+  "vite.https": true,
+  "js/ts.preferences.preferTypeOnlyAutoImports": true
 }
