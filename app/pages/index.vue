@@ -23,7 +23,7 @@ const links = ref<ButtonProps[]>([
   {
     label: 'Get in touch',
     icon: 'i-tabler-mail',
-    to: '/contact',
+    to: 'mailto:info@rafasoares.com',
   },
 ])
 </script>
