@@ -3,7 +3,23 @@ import type { ButtonProps } from '@nuxt/ui'
 
 useTitle('Home')
 
+const socialLink: Partial<ButtonProps> = {
+  target: '_blank',
+  variant: 'ghost',
+  color: 'neutral',
+}
+
 const links = ref<ButtonProps[]>([
+  {
+    ...socialLink,
+    icon: 'i-tabler-brand-github',
+    to: 'https://github.com/rafasoares',
+  },
+  {
+    ...socialLink,
+    icon: 'i-tabler-brand-linkedin',
+    to: 'https://www.linkedin.com/in/rafasoaresms/',
+  },
   {
     label: 'Get in touch',
     icon: 'i-tabler-mail',
