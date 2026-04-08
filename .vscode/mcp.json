@@ -1,0 +1,20 @@
+{
+  "servers": {
+    "regle": {
+      "command": "npx",
+      "args": [
+        "@regle/mcp-server"
+      ],
+      "type": "stdio"
+    },
+    "nuxt": {
+      "url": "https://nuxt.com/mcp",
+      "type": "http"
+    },
+    "nuxt-ui": {
+      "url": "https://ui.nuxt.com/mcp",
+      "type": "http"
+    }
+  },
+  "inputs": []
+}
