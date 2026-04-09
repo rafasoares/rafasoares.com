@@ -41,8 +41,9 @@ export default defineNuxtConfig({
   },
 
   icon: {
-    serverBundle: {
-      collections: ['tabler'],
+    cssLayer: 'base',
+    clientBundle: {
+      scan: true,
     },
   },
 })

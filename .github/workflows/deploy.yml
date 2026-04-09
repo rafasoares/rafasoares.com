@@ -22,7 +22,7 @@ jobs:
 
       - run: pnpm install
 
-      - run: pnpm run build --preset github-pages
+      - run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
