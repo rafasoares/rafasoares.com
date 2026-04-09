@@ -1,10 +1,11 @@
 <script setup lang="ts">
+const year = new Date().getFullYear()
 </script>
 
 <template>
   <u-footer>
     <template #left>
-      &copy; Rafael Soares - 2026
+      Copyright &copy; Rafael Soares - {{ year }}
     </template>
   </u-footer>
 </template>
