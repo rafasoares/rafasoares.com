@@ -2,7 +2,10 @@
 </script>
 
 <template>
-  <u-header title="">
+  <u-header
+    title=""
+    :toggle="false"
+  >
     <template #right>
       <u-color-mode-button />
       <u-tooltip
