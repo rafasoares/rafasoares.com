@@ -11,6 +11,26 @@
       "sourceType": "github",
       "computedHash": "9b7ff4c14185b7205c04c7ef41969d7b5c01e59c85e6d64083a7f497bf90b8d7"
     },
+    "playwright-cli": {
+      "source": "microsoft/playwright-cli",
+      "sourceType": "github",
+      "computedHash": "45b90b409fb80cf08ee4e8b72377bddacfac3d1c1fac69bff5fd5342fad26adf"
+    },
+    "regle": {
+      "source": "victorgarciaesgi/regle",
+      "sourceType": "github",
+      "computedHash": "88ba72dd0a13bb0d927989e17c69c9cd513838ac5522ba895985231086d646cd"
+    },
+    "regle-advanced": {
+      "source": "victorgarciaesgi/regle",
+      "sourceType": "github",
+      "computedHash": "904dcc603a7554df9186ae730e282b14fc1161e957e812675cb350aa2cb5a7fc"
+    },
+    "regle-typescript": {
+      "source": "victorgarciaesgi/regle",
+      "sourceType": "github",
+      "computedHash": "9b55b50e4de9e8096e0606d27a34d1b7cb6d0370d3e2b968e80d758a833ab21d"
+    },
     "vue": {
       "source": "antfu/skills",
       "sourceType": "github",
