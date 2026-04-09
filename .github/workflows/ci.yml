@@ -1,4 +1,4 @@
-name: ci
+name: Lint, Typecheck, and Test
 
 on: push
 
