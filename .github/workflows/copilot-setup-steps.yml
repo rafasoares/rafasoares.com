@@ -1,10 +1,19 @@
-name: Lint and Typecheck
+name: "Copilot Setup Steps"
 
-on: push
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
 
 jobs:
-  ci:
+  copilot-setup-steps:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout code
@@ -18,9 +27,3 @@ jobs:
           cache: "pnpm"
 
       - run: pnpm install
-
-      - name: Lint
-        run: pnpm run lint
-
-      - name: Typecheck
-        run: pnpm run typecheck
