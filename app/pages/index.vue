@@ -29,26 +29,24 @@ const links = ref<ButtonProps[]>([
 </script>
 
 <template>
-  <u-page>
-    <u-page-hero
-      title="Hi, I'm Rafael."
-      description="This website is currently being rebuilt. Please check again later."
-      :links
-    >
-      <template #headline>
-        <u-badge
+  <u-page-hero
+    title="Hi, I'm Rafael."
+    description="This website is currently being rebuilt. Please check again later."
+    :links
+  >
+    <template #headline>
+      <u-badge
+        color="success"
+        variant="soft"
+        class="rounded-full"
+      >
+        <u-chip
           color="success"
-          variant="soft"
-          class="rounded-full"
-        >
-          <u-chip
-            color="success"
-            standalone
-            inset
-          />
-          Available for contract and full-time work
-        </u-badge>
-      </template>
-    </u-page-hero>
-  </u-page>
+          standalone
+          inset
+        />
+        Available for contract and full-time work
+      </u-badge>
+    </template>
+  </u-page-hero>
 </template>

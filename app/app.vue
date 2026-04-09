@@ -11,7 +11,7 @@ useSeoMeta({
 <template>
   <u-app>
     <nuxt-layout>
-      <u-main class="relative">
+      <u-main>
         <nuxt-page />
       </u-main>
     </nuxt-layout>

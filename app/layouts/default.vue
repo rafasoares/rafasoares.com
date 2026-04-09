@@ -2,11 +2,9 @@
 </script>
 
 <template>
-  <div>
-    <u-container>
-      <app-header />
-      <slot />
-      <app-footer />
-    </u-container>
-  </div>
+  <u-page>
+    <app-header />
+    <slot />
+    <app-footer />
+  </u-page>
 </template>
