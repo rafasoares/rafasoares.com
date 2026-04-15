@@ -10,9 +10,13 @@ useSeoMeta({
 
 <template>
   <u-app>
+    <app-header />
+
     <nuxt-layout>
-      <u-main>
+      <u-main class="flex flex-col">
         <nuxt-page />
+
+        <app-footer />
       </u-main>
     </nuxt-layout>
   </u-app>

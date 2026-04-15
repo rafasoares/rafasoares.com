@@ -3,8 +3,6 @@
 
 <template>
   <u-page>
-    <app-header />
     <slot />
-    <app-footer />
   </u-page>
 </template>

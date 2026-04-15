@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <u-footer>
+  <u-footer class="mt-auto">
     <template #left>
       Copyright &copy; Rafael Soares - <nuxt-time
         :datetime="Date.now()"
