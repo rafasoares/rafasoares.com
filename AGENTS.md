@@ -18,7 +18,7 @@ Personal website for Rafael Soares — currently a static site deployed to GitHu
 - **Nuxt 4** currently using static generation (`nuxt generate`) — no server routes or API layer at this time.
 - **Tailwind CSS v4** — uses `@theme static {}` blocks, not `tailwind.config.ts`.
 - **Icons**: Prefer Tabler (`i-tabler-*`). All Nuxt UI icon slots are overridden in [app/app.config.ts](app/app.config.ts). Never add or use a different icon set without asking first.
-- **Color scheme**: dark-first (`dark light`). Primary=blue, secondary=slate, neutral=zinc. Custom green palette (Nuxt green) defined in [app/assets/css/main.css](app/assets/css/main.css).
+- **Color scheme**: dark-first (`dark light`). Primary=blue, secondary=slate, neutral=zinc.
 - **Font**: DM Sans (configured via `@theme static` in CSS, not via config file).
 
 ## Conventions
