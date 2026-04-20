@@ -23,7 +23,7 @@ Personal website for Rafael Soares — currently a static site deployed to GitHu
 
 ## Conventions
 
-- **Component tag casing**: kebab-case in templates (`<app-header>`, `<u-page-hero>`), not PascalCase. Exception: use PascalCase for single-word components to avoid collision with native HTML tags (e.g. `<Icon>`, `<Form>`) and for acronyms (e.g. `<MDC>` instead of `<m-d-c>`).
+- **Component tag casing**: kebab-case in templates (`<app-header>`, `<u-page-hero>`), not PascalCase. Exception: use PascalCase for components that collide with native HTML tags (e.g. `<Main>`, `<Header>`, `<Form>`, etc.) and for acronyms (e.g. `<MDC>` instead of `<m-d-c>`).
 - **Nuxt UI components**: use the `u-` prefix in templates (e.g. `<u-button>`, `<u-app>`, `<u-page>`).
 - **`useTitle` composable**: always use `useTitle(title, description?)` for page head/SEO — it appends " - Rafael Soares" automatically.
 - **MDC**: `@nuxtjs/mdc` is installed for rendering markdown inline via `<MDC :value="..." />`.

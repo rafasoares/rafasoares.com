@@ -3,9 +3,12 @@
 
 <template>
   <u-header
-    title=""
     :toggle="false"
   >
+    <template #title>
+      <icon name="i-tabler-home" />
+    </template>
+
     <template #right>
       <u-color-mode-button />
       <u-tooltip
