@@ -9,15 +9,15 @@ useSeoMeta({
 </script>
 
 <template>
-  <u-app>
+  <u-app :toaster="{ position: 'top-right' }">
     <app-header />
 
-    <nuxt-layout>
-      <u-main class="flex flex-col">
+    <u-main class="flex flex-col">
+      <nuxt-layout>
         <nuxt-page />
 
         <app-footer />
-      </u-main>
-    </nuxt-layout>
+      </nuxt-layout>
+    </u-main>
   </u-app>
 </template>

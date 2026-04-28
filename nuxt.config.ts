@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/icon', '@nuxtjs/mdc'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/ui',
+    '@nuxt/icon',
+    '@nuxtjs/mdc',
+    '@regle/nuxt',
+    '@vueuse/nuxt',
+  ],
 
   devtools: {
     enabled: true,
@@ -27,6 +34,18 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2026-03-30',
+
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@nuxt/ui > prosemirror-state',
+        '@nuxt/ui > prosemirror-transform',
+        '@nuxt/ui > prosemirror-model',
+        '@nuxt/ui > prosemirror-view',
+        '@nuxt/ui > prosemirror-gapcursor',
+      ],
+    },
+  },
 
   typescript: {
     typeCheck: true,
