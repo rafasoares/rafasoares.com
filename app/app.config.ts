@@ -56,5 +56,18 @@ export default defineAppConfig({
       upload: 'i-tabler-upload',
       warning: 'i-tabler-alert-triangle',
     },
+    input: {
+      slots: {
+        root: 'w-full',
+      },
+    },
+    form: {
+      base: 'space-y-4',
+    },
+    selectMenu: {
+      slots: {
+        base: 'w-full',
+      },
+    },
   },
 })
