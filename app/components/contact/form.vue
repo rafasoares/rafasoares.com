@@ -25,10 +25,6 @@ const subjects = [
   'Partnership',
 ]
 
-function onSubmit() {
-  navigateTo('/contact/sent')
-}
-
 onUnmounted(() => {
   console.log('unmounted')
 })
@@ -38,7 +34,7 @@ onUnmounted(() => {
   <u-form
     :schema="r$"
     :state="r$.$value"
-    @submit="onSubmit"
+    netlify
   >
     <u-form-field
       required
