@@ -235,14 +235,13 @@ const fixedToolbarItems = [
       />
     </u-editor>
   </client-only>
-  <server-only>
-    <u-textarea
-      v-model="model"
-      :placeholder="placeholder"
-      name="message"
-      class="hidden"
-    />
-  </server-only>
+
+  <u-textarea
+    v-model="model"
+    :placeholder="placeholder"
+    name="message"
+    class="hidden"
+  />
 </template>
 
 <style>
