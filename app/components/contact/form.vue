@@ -24,6 +24,7 @@ async function onSubmit() {
   try {
     const body = new URLSearchParams()
 
+    body.append('form-name', 'contact')
     Object.entries(r$.$value).forEach(([key, value]) => {
       body.append(key, value)
     })
