@@ -232,6 +232,12 @@ const fixedToolbarItems = [
       :editor
       :items="emojis"
     />
+
+    <u-input
+      v-model="model"
+      type="hidden"
+      name="message"
+    />
   </u-editor>
 </template>
 

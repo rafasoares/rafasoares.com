@@ -32,6 +32,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
+    '/contact': { prerender: true },
   },
 
   compatibilityDate: '2026-03-30',

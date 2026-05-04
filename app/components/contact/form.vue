@@ -59,6 +59,11 @@ async function onSubmit() {
     method="POST"
     @submit="onSubmit"
   >
+    <u-input
+      name="form-name"
+      type="hidden"
+      value="contact"
+    />
     <u-form-field
       required
       label="Name"
