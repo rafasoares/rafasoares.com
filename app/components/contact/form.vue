@@ -28,8 +28,9 @@ async function onSubmit() {
       data.append(key, value)
     })
 
-    await $fetch('/', {
+    await $fetch('/contact', {
       method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: data,
     })
 
@@ -54,6 +55,8 @@ async function onSubmit() {
     :schema="r$"
     :state="r$.$value"
     netlify
+    action="/contact"
+    method="POST"
     @submit="onSubmit"
   >
     <u-form-field
