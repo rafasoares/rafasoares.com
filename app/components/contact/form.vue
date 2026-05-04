@@ -22,16 +22,16 @@ const subjects = [
 
 async function onSubmit() {
   try {
-    const data = new FormData()
-    data.append('form-name', 'contact')
+    const body = new URLSearchParams()
+
+    body.append('form-name', 'contact')
     Object.entries(r$.$value).forEach(([key, value]) => {
-      data.append(key, value)
+      body.append(key, value)
     })
 
     await $fetch('/contact', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: data,
+      body,
     })
 
     navigateTo('/contact/success')
