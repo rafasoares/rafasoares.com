@@ -239,7 +239,8 @@ const fixedToolbarItems = [
     <u-textarea
       v-model="model"
       :placeholder="placeholder"
-      class="min-h-72"
+      name="message"
+      class="hidden"
     />
   </server-only>
 </template>
