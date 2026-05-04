@@ -58,6 +58,7 @@ async function onSubmit() {
     netlify
     action="/contact/success"
     method="POST"
+    :validate-on="['input', 'change']"
     @submit="onSubmit"
   >
     <u-form-field

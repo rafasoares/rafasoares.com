@@ -29,6 +29,8 @@ const extensions = [emoji, codeBlock, textAlign]
 
 const emojis = computed(() => gitHubEmojis.filter(emoji => !emoji.name.startsWith('regional_indicator_')))
 
+const editorRef = useTemplateRef('editor')
+
 const fixedToolbarItems = [
   [
     {
@@ -191,6 +193,7 @@ const fixedToolbarItems = [
 <template>
   <client-only>
     <u-editor
+      ref="editor"
       v-slot="{ editor }"
       v-model="model"
       content-type="html"
@@ -239,8 +242,8 @@ const fixedToolbarItems = [
   <u-textarea
     v-model="model"
     :placeholder="placeholder"
-    name="message"
-    class="hidden"
+    class="sr-only"
+    @focus="editorRef?.editor?.commands.focus()"
   />
 </template>
 
