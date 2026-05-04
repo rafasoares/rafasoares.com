@@ -8,6 +8,7 @@ const { r$ } = useRegle({
   email: '',
   subject: '',
   message: '',
+  address: '',
 }, {
   name: { required },
   email: { required, email },
@@ -55,7 +56,8 @@ async function onSubmit() {
     id="contact"
     :schema="r$"
     :state="r$.$value"
-    netlify
+    data-netlify="true"
+    data-netlify-honeypot="address"
     action="/contact/success"
     method="POST"
     :validate-on="['input', 'change']"
@@ -103,6 +105,18 @@ async function onSubmit() {
       <contact-message
         v-model="r$.$value.message"
         placeholder="Your message"
+      />
+    </u-form-field>
+
+    <u-form-field
+      name="address"
+      class="hidden"
+      label="Skip this field"
+    >
+      <u-input
+        v-model="r$.$value.address"
+        placeholder="Your address"
+        autocomplete="off"
       />
     </u-form-field>
 
