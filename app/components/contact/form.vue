@@ -1,18 +1,13 @@
 <script lang="ts" setup>
 import { email, required } from '@regle/rules'
 
+const toast = useToast()
+
 const { r$ } = useRegle({
   name: '',
   email: '',
   subject: '',
-  message: `# Building Modern Interfaces with Nuxt UI
-
-Welcome to the **Nuxt UI Editor** — a powerful rich text editing experience built on [TipTap](https://tiptap.dev). This editor combines *flexibility* with ease of use, making content creation a breeze.
-
-## Rich Formatting Options
-
-The editor supports all common text formatting including **bold**, *italic*, <u>underline</u>, ~~strikethrough~~, and \`inline code\`. You can also combine them for **_bold and italic_** text.
-`,
+  message: '',
 }, {
   name: { required },
   email: { required, email },
@@ -25,9 +20,33 @@ const subjects = [
   'Partnership',
 ]
 
-onUnmounted(() => {
-  console.log('unmounted')
-})
+async function onSubmit() {
+  try {
+    const data = new FormData()
+    data.append('form-name', 'contact')
+    Object.entries(r$.$value).forEach(([key, value]) => {
+      data.append(key, value)
+    })
+
+    await $fetch('/', {
+      method: 'POST',
+      body: data,
+    })
+
+    navigateTo('/contact/success')
+  }
+  catch (error) {
+    console.error('Failed to submit contact form:', error)
+
+    toast.add({
+      id: 'contact-form-error',
+      title: `Oh no! Can't send your message right now.`,
+      icon: 'i-tabler-mood-wrrr',
+      description: 'Please try again later.',
+      color: 'error',
+    })
+  }
+}
 </script>
 
 <template>
@@ -35,6 +54,7 @@ onUnmounted(() => {
     :schema="r$"
     :state="r$.$value"
     netlify
+    @submit="onSubmit"
   >
     <u-form-field
       required
@@ -83,6 +103,7 @@ onUnmounted(() => {
 
     <u-button
       type="submit"
+      loading-auto
     >
       Send message
     </u-button>

@@ -192,7 +192,7 @@ const fixedToolbarItems = [
   <u-editor
     v-slot="{ editor }"
     v-model="model"
-    content-type="markdown"
+    content-type="html"
     class="border border-muted rounded-md"
     :ui="{
       base: 'sm:px-2.5 min-h-72',
