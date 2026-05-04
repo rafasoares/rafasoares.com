@@ -189,56 +189,59 @@ const fixedToolbarItems = [
 </script>
 
 <template>
-  <u-editor
-    v-slot="{ editor }"
-    v-model="model"
-    content-type="html"
-    class="border border-muted rounded-md"
-    :ui="{
-      base: 'sm:px-2.5 min-h-72',
-    }"
-    :extensions
-    :placeholder="{ mode: 'firstLine', placeholder }"
-    :starter-kit="{
-      codeBlock: false,
-    }"
-  >
-    <u-editor-toolbar
-      :editor
-      :items="fixedToolbarItems"
-      class="border-b border-muted px-2.5 py-1.5"
-    >
-      <template #link>
-        <contact-link-button
-          :editor
-        />
-      </template>
-    </u-editor-toolbar>
-
-    <u-editor-toolbar
-      :editor
-      :items="[{ slot: 'link' as const }]"
-      layout="bubble"
-      :should-show="({ editor, view }) => view.hasFocus() && editor.isActive('link')"
-    >
-      <template #link>
-        <contact-link-editor
-          :editor
-        />
-      </template>
-    </u-editor-toolbar>
-
-    <u-editor-emoji-menu
-      :editor
-      :items="emojis"
-    />
-
-    <u-input
+  <client-only>
+    <u-editor
+      v-slot="{ editor }"
       v-model="model"
-      type="hidden"
-      name="message"
+      content-type="html"
+      class="border border-muted rounded-md"
+      :ui="{
+        base: 'sm:px-2.5 min-h-72',
+      }"
+      :extensions
+      :placeholder="{ mode: 'firstLine', placeholder }"
+      :starter-kit="{
+        codeBlock: false,
+      }"
+    >
+      <u-editor-toolbar
+        :editor
+        :items="fixedToolbarItems"
+        class="border-b border-muted px-2.5 py-1.5"
+      >
+        <template #link>
+          <contact-link-button
+            :editor
+          />
+        </template>
+      </u-editor-toolbar>
+
+      <u-editor-toolbar
+        :editor
+        :items="[{ slot: 'link' as const }]"
+        layout="bubble"
+        :should-show="({ editor, view }) => view.hasFocus() && editor.isActive('link')"
+      >
+        <template #link>
+          <contact-link-editor
+            :editor
+          />
+        </template>
+      </u-editor-toolbar>
+
+      <u-editor-emoji-menu
+        :editor
+        :items="emojis"
+      />
+    </u-editor>
+  </client-only>
+  <server-only>
+    <u-textarea
+      v-model="model"
+      :placeholder="placeholder"
+      class="min-h-72"
     />
-  </u-editor>
+  </server-only>
 </template>
 
 <style>
