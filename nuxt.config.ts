@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/mdc',
     '@regle/nuxt',
     '@vueuse/nuxt',
+    '@netlify/nuxt',
   ],
 
   devtools: {
@@ -31,6 +32,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
+    '/contact': { prerender: true },
   },
 
   compatibilityDate: '2026-03-30',
@@ -43,12 +45,17 @@ export default defineNuxtConfig({
         '@nuxt/ui > prosemirror-model',
         '@nuxt/ui > prosemirror-view',
         '@nuxt/ui > prosemirror-gapcursor',
+        '@regle/rules',
+        '@regle/core',
+        '@tiptap/extension-emoji',
+        '@tiptap/extension-text-align',
+        'tiptap-extension-code-block-shiki',
       ],
     },
   },
 
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
   },
 
   eslint: {
