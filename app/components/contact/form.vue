@@ -24,12 +24,11 @@ async function onSubmit() {
   try {
     const body = new URLSearchParams()
 
-    body.append('form-name', 'contact')
     Object.entries(r$.$value).forEach(([key, value]) => {
       body.append(key, value)
     })
 
-    await $fetch('/contact', {
+    await $fetch('/contact/success', {
       method: 'POST',
       body,
     })
@@ -52,18 +51,14 @@ async function onSubmit() {
 
 <template>
   <u-form
+    id="contact"
     :schema="r$"
     :state="r$.$value"
     netlify
-    action="/contact"
+    action="/contact/success"
     method="POST"
     @submit="onSubmit"
   >
-    <u-input
-      name="form-name"
-      type="hidden"
-      value="contact"
-    />
     <u-form-field
       required
       label="Name"
