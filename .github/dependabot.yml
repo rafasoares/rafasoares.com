@@ -20,10 +20,9 @@ updates:
       regle:
         patterns:
           - "@regle/*"
-      tiptap:
-        patterns:
-          - "@tiptap/*"
-          - "tiptap-*"
+    ignore:
+      - dependency-name: "@tiptap/*"
+        versions: [ ">=3.22.5" ]
 
   - package-ecosystem: "github-actions"
     directory: "/"
