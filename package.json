@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "clean": "nuxt cleanup",
     "dev": "nuxt dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -21,7 +22,6 @@
     "@regle/rules": "^1.24.0",
     "@tiptap/extension-emoji": "^3.22.4",
     "@tiptap/extension-text-align": "^3.22.4",
-    "@tiptap/vue-3": "^3.22.4",
     "@vueuse/nuxt": "^14.3.0",
     "nuxt": "^4.4.2",
     "tailwindcss": "^4.2.4",
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",
+    "@tiptap/vue-3": "^3.22.4",
     "eslint": "^10.3.0",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.2.7"
