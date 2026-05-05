@@ -4,8 +4,15 @@ import type { ButtonProps } from '@nuxt/ui'
 const links = ref<ButtonProps[]>([
   {
     to: '/',
-    label: 'Back to home',
+    label: 'Home',
     icon: 'i-tabler-home',
+  },
+  {
+    to: '/contact',
+    label: 'Back to form',
+    icon: 'i-tabler-arrow-left',
+    color: 'neutral',
+    variant: 'ghost',
   },
 ])
 </script>
