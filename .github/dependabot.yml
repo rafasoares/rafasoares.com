@@ -6,9 +6,24 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/" 
+    directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      nuxt:
+        patterns:
+          - "@nuxt/*"
+          - "@nuxtjs/*"
+      icons:
+        patterns:
+          - "@iconify-json/*"
+      regle:
+        patterns:
+          - "@regle/*"
+      tiptap:
+        patterns:
+          - "@tiptap/*"
+          - "tiptap-*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
