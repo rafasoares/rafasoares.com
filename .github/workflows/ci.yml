@@ -2,6 +2,9 @@ name: Lint and Typecheck
 
 on: push
 
+permissions:
+  contents: read
+
 jobs:
   ci:
     runs-on: ubuntu-latest
