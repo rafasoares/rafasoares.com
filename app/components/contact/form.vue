@@ -53,13 +53,8 @@ async function onSubmit() {
 
 <template>
   <u-form
-    id="contact"
     :schema="r$"
     :state="r$.$value"
-    data-netlify="true"
-    data-netlify-honeypot="address"
-    action="/contact/success"
-    method="POST"
     :validate-on="['input', 'change']"
     @submit="onSubmit"
   >
