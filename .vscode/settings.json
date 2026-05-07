@@ -31,5 +31,8 @@
   "vite.buildCommand": "pnpm build",
   "vite.devCommand": "pnpm dev",
   "vite.https": true,
-  "js/ts.preferences.preferTypeOnlyAutoImports": true
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
+  "search.exclude": {
+    "**/.agents/skills": true
+  }
 }
