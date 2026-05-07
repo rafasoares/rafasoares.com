@@ -23,7 +23,7 @@
     "@tiptap/extension-emoji": "^3.22.4",
     "@tiptap/extension-text-align": "^3.22.4",
     "@vueuse/nuxt": "^14.3.0",
-    "nuxt": "^4.4.2",
+    "nuxt": "^4.4.4",
     "tailwindcss": "^4.2.4",
     "tiptap-extension-code-block-shiki": "^1.1.0"
   },
