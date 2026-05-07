@@ -4,46 +4,55 @@
     "nuxt": {
       "source": "antfu/skills",
       "sourceType": "github",
+      "skillPath": "skills/nuxt/SKILL.md",
       "computedHash": "9e8237ec92083db9a6f4c77d5e5bf4b1d9873d670671235bc75455ee1ca39c74"
     },
     "nuxt-ui": {
       "source": "nuxt/ui",
       "sourceType": "github",
-      "computedHash": "9b7ff4c14185b7205c04c7ef41969d7b5c01e59c85e6d64083a7f497bf90b8d7"
+      "skillPath": "skills/nuxt-ui/SKILL.md",
+      "computedHash": "2d58c6092b7028db223a819d5a37badc860a4036ca134a3e457ce7b056562f72"
     },
     "playwright-cli": {
       "source": "microsoft/playwright-cli",
       "sourceType": "github",
-      "computedHash": "45b90b409fb80cf08ee4e8b72377bddacfac3d1c1fac69bff5fd5342fad26adf"
+      "skillPath": "skills/playwright-cli/SKILL.md",
+      "computedHash": "84495cfda62b6c012afc4cc34a0c35bfc7923ba35983b8c04ce4cace0f35a5d8"
     },
     "regle": {
       "source": "victorgarciaesgi/regle",
       "sourceType": "github",
-      "computedHash": "88ba72dd0a13bb0d927989e17c69c9cd513838ac5522ba895985231086d646cd"
+      "skillPath": "skills/regle/SKILL.md",
+      "computedHash": "0e7e97fa0eae5ccb2707e294321129db7beb4d5e0d4b25cac3b6a968374c2d00"
     },
     "regle-advanced": {
       "source": "victorgarciaesgi/regle",
       "sourceType": "github",
+      "skillPath": "skills/regle-advanced/SKILL.md",
       "computedHash": "904dcc603a7554df9186ae730e282b14fc1161e957e812675cb350aa2cb5a7fc"
     },
     "regle-typescript": {
       "source": "victorgarciaesgi/regle",
       "sourceType": "github",
+      "skillPath": "skills/regle-typescript/SKILL.md",
       "computedHash": "9b55b50e4de9e8096e0606d27a34d1b7cb6d0370d3e2b968e80d758a833ab21d"
     },
     "vue": {
       "source": "antfu/skills",
       "sourceType": "github",
+      "skillPath": "skills/vue/SKILL.md",
       "computedHash": "9c241141e07e836e4f0537c63e8f929fba3767c2997250be38e699f19b75e3f2"
     },
     "vue-best-practices": {
       "source": "antfu/skills",
       "sourceType": "github",
+      "skillPath": "skills/vue-best-practices/SKILL.md",
       "computedHash": "d7d22c8cb343583c3904692c4d1d7b50382945e433e4f6e053f4aabb9846cbc3"
     },
     "vueuse-functions": {
       "source": "antfu/skills",
       "sourceType": "github",
+      "skillPath": "skills/vueuse-functions/SKILL.md",
       "computedHash": "fedfc78f035a88fe3e9d823f44725fe8981486c55b966c17fbd0d7c28339e49a"
     }
   }
