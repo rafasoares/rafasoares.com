@@ -12,6 +12,8 @@ updates:
     groups:
       nuxt:
         patterns:
+          - nitropack
+          - nuxt
           - "@nuxt/*"
           - "@nuxtjs/*"
       icons:
