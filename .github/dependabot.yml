@@ -16,15 +16,13 @@ updates:
           - nuxt
           - "@nuxt/*"
           - "@nuxtjs/*"
+          - "@tiptap/*"
       icons:
         patterns:
           - "@iconify-json/*"
       regle:
         patterns:
           - "@regle/*"
-    ignore:
-      - dependency-name: "@tiptap/*"
-        versions: [ ">=3.22.5" ]
 
   - package-ecosystem: "github-actions"
     directory: "/"
