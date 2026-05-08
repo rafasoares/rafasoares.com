@@ -48,8 +48,8 @@ importers:
         specifier: ^4.2.4
         version: 4.2.4
       tiptap-extension-code-block-shiki:
-        specifier: ^1.1.0
-        version: 1.1.0(@tiptap/core@3.22.5(@tiptap/pm@3.22.5))(@tiptap/pm@3.22.5)(shiki@4.0.2)
+        specifier: ^1.2.0
+        version: 1.2.0(@tiptap/core@3.22.5(@tiptap/pm@3.22.5))(@tiptap/pm@3.22.5)(shiki@4.0.2)
     devDependencies:
       '@nuxt/eslint':
         specifier: ^1.15.2
@@ -6579,12 +6579,12 @@ packages:
     resolution: {integrity: sha512-pn99VhoACYR8nFHhxqix+uvsbXineAasWm5ojXoN8xEwK5Kd3/TrhNn1wByuD52UxWRLy8pu+kRMniEi6Eq9Zg==}
     engines: {node: '>=12.0.0'}
 
-  tiptap-extension-code-block-shiki@1.1.0:
-    resolution: {integrity: sha512-7O4tcOFertjI40AtfnDXLGkhIgUQO5ozfwS53CbSRfmdoWAyVOIfUQrYodEDJoE9QvmWHM49UAXm5+QRHigiXg==}
+  tiptap-extension-code-block-shiki@1.2.0:
+    resolution: {integrity: sha512-/xaLR/0pYfOvH+VpaHt3FczfSJmSbSAT3iP6n+So9ocGjuAebfzpga0vsXHEFno+3Jb0ws4/GTjmsiSh+aTu0w==}
     peerDependencies:
       '@tiptap/core': ^2.3.0 || ^3.0.0
       '@tiptap/pm': ^2.3.0 || ^3.0.0
-      shiki: ^3.0.0
+      shiki: ^3.0.0 || ^4.0.0
 
   tmp-promise@3.0.3:
     resolution: {integrity: sha512-RwM7MoPojPxsOBYnyd2hy0bxtIlVrihNs9pj5SUvY8Zz1sQcQG2tG1hSr8PDxfgEB8RNKDhqbIlroIarSNDNsQ==}
@@ -14952,7 +14952,7 @@ snapshots:
       fdir: 6.5.0(picomatch@4.0.4)
       picomatch: 4.0.4
 
-  tiptap-extension-code-block-shiki@1.1.0(@tiptap/core@3.22.5(@tiptap/pm@3.22.5))(@tiptap/pm@3.22.5)(shiki@4.0.2):
+  tiptap-extension-code-block-shiki@1.2.0(@tiptap/core@3.22.5(@tiptap/pm@3.22.5))(@tiptap/pm@3.22.5)(shiki@4.0.2):
     dependencies:
       '@tiptap/core': 3.22.5(@tiptap/pm@3.22.5)
       '@tiptap/pm': 3.22.5
