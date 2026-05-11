@@ -2,12 +2,16 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/ui',
-    '@nuxt/icon',
-    '@nuxtjs/mdc',
-    '@regle/nuxt',
-    '@vueuse/nuxt',
     '@netlify/nuxt',
+
+    '@vueuse/nuxt',
+
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/ui',
+    '@nuxt/content',
+
+    '@regle/nuxt',
   ],
 
   devtools: {

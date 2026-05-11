@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "clean": "nuxt cleanup",
+    "cleanup": "nuxt cleanup && pnpm clean",
     "dev": "nuxt dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -14,15 +14,17 @@
   "dependencies": {
     "@iconify-json/tabler": "^1.2.34",
     "@netlify/nuxt": "0.3.1",
+    "@nuxt/content": "^3.13.0",
     "@nuxt/icon": "2.2.2",
+    "@nuxt/image": "2.0.0",
     "@nuxt/ui": "^4.7.1",
-    "@nuxtjs/mdc": "0.21.1",
     "@regle/core": "^1.24.3",
     "@regle/nuxt": "1.24.3",
     "@regle/rules": "^1.24.3",
     "@tiptap/extension-emoji": "^3.22.5",
     "@tiptap/extension-text-align": "^3.22.5",
     "@vueuse/nuxt": "^14.3.0",
+    "better-sqlite3": "^12.9.0",
     "nuxt": "^4.4.4",
     "tailwindcss": "^4.2.4",
     "tiptap-extension-code-block-shiki": "^1.2.0"
