@@ -25,7 +25,7 @@
     "@tiptap/extension-text-align": "^3.22.5",
     "@vueuse/nuxt": "^14.3.0",
     "better-sqlite3": "^12.9.0",
-    "nuxt": "^4.4.4",
+    "nuxt": "^4.4.5",
     "tailwindcss": "^4.2.4",
     "tiptap-extension-code-block-shiki": "^1.2.0"
   },
