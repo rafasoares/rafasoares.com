@@ -12,7 +12,7 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/tabler": "^1.2.34",
+    "@iconify-json/tabler": "^1.2.35",
     "@netlify/nuxt": "0.3.3",
     "@nuxt/content": "^3.13.0",
     "@nuxt/icon": "2.2.2",
