@@ -21,17 +21,17 @@
     "@regle/core": "^1.25.2",
     "@regle/nuxt": "1.25.2",
     "@regle/rules": "^1.25.2",
-    "@tiptap/extension-emoji": "^3.22.5",
-    "@tiptap/extension-text-align": "^3.22.5",
+    "@tiptap/extension-emoji": "^3.23.2",
+    "@tiptap/extension-text-align": "^3.23.2",
     "@vueuse/nuxt": "^14.3.0",
     "better-sqlite3": "^12.9.0",
-    "nuxt": "^4.4.4",
+    "nuxt": "^4.4.5",
     "tailwindcss": "^4.2.4",
     "tiptap-extension-code-block-shiki": "^1.2.0"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",
-    "@tiptap/vue-3": "^3.22.5",
+    "@tiptap/vue-3": "^3.23.2",
     "eslint": "^10.3.0",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.2.8"
