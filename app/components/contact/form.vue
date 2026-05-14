@@ -97,9 +97,11 @@ async function onSubmit() {
       label="Message"
       name="message"
     >
-      <contact-message
+      <u-textarea
         v-model="r$.$value.message"
         placeholder="Your message"
+        autoresize
+        :ui="{ base: 'min-h-72' }"
       />
     </u-form-field>
 
