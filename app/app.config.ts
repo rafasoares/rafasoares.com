@@ -61,6 +61,12 @@ export default defineAppConfig({
         root: 'w-full',
       },
     },
+    inputMenu: {
+      slots: {
+        root: 'w-full',
+        trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200',
+      },
+    },
     form: {
       base: 'space-y-4',
     },

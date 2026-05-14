@@ -15,11 +15,11 @@ const { r$ } = useRegle({
   message: { required },
 })
 
-const subjects = [
+const subjects = ref([
   'General inquiry',
   'Feedback',
   'Partnership',
-]
+])
 
 async function onSubmit() {
   try {
@@ -92,12 +92,14 @@ async function onSubmit() {
       label="Subject"
       name="subject"
     >
-      <u-select-menu
+      <u-input-menu
         v-model="r$.$value.subject"
-        create-item="always"
+        autocomplete
+        clear
+        open-on-focus
         placeholder="Select a subject, or write your own"
+        :content="{ hideWhenEmpty: true }"
         :items="subjects"
-        :search-input="{ placeholder: 'Type to search or create an option...' }"
       />
     </u-form-field>
 
