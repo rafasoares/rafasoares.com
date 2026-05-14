@@ -53,11 +53,20 @@ async function onSubmit() {
 
 <template>
   <u-form
+    id="contact"
     :schema="r$"
     :state="r$.$value"
     :validate-on="['input', 'change']"
+    data-netlify="true"
+    data-netlify-honeypot="address"
     @submit="onSubmit"
   >
+    <u-input
+      type="hidden"
+      name="form-name"
+      value="contact"
+    />
+
     <u-form-field
       required
       label="Name"
@@ -97,9 +106,11 @@ async function onSubmit() {
       label="Message"
       name="message"
     >
-      <contact-message
+      <u-textarea
         v-model="r$.$value.message"
         placeholder="Your message"
+        autoresize
+        :ui="{ base: 'min-h-72' }"
       />
     </u-form-field>
 
