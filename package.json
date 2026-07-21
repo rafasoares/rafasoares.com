@@ -12,10 +12,10 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/tabler": "^1.2.35",
-    "@netlify/nuxt": "^0.3.3",
-    "@nuxt/content": "^3.13.0",
-    "@nuxt/icon": "2.2.2",
+    "@iconify-json/tabler": "^1.2.37",
+    "@netlify/nuxt": "^0.3.9",
+    "@nuxt/content": "^3.15.0",
+    "@nuxt/icon": "2.3.1",
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "^4.10.0",
     "@regle/core": "^1.25.2",
@@ -24,13 +24,13 @@
     "@vueuse/nuxt": "^14.3.0",
     "better-sqlite3": "^12.9.0",
     "nuxt": "^4.5.0",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.15.2",
-    "eslint": "^10.3.0",
+    "@nuxt/eslint": "^1.16.0",
+    "eslint": "^10.7.0",
     "typescript": "^6.0.3",
-    "vue-tsc": "^3.2.8"
+    "vue-tsc": "^3.3.7"
   },
   "packageManager": "pnpm@11.15.1+sha512.81350b07e53c9538a02f1f2303b4290fa2d7be04e56e2a970c4cc4b417dc761de196edabd49d55c7dc9580db81007c44143e4e3d7e462b3000d23c255122d065"
 }
