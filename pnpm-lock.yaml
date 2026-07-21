@@ -12,7 +12,7 @@ importers:
         specifier: ^1.2.35
         version: 1.2.35
       '@netlify/nuxt':
-        specifier: 0.3.3
+        specifier: ^0.3.3
         version: 0.3.3(db0@0.3.4(@electric-sql/pglite@0.3.16)(better-sqlite3@12.9.0))(ioredis@5.10.1)(magic-string@1.0.0)(magicast@0.5.3)(oxc-parser@0.140.0)(rolldown@1.2.0)(rollup@4.60.4)(srvx@0.11.22)(unplugin@3.3.0(esbuild@0.27.7)(rolldown@1.2.0)(rollup@4.60.4)(vite@8.1.5(@types/node@25.7.0)(esbuild@0.27.7)(jiti@2.7.0)(terser@5.47.1)(yaml@2.9.0)))
       '@nuxt/content':
         specifier: ^3.13.0
@@ -30,7 +30,7 @@ importers:
         specifier: ^1.25.2
         version: 1.25.2(pinia@3.0.4(typescript@6.0.3)(vue@3.5.40(typescript@6.0.3)))(vue@3.5.40(typescript@6.0.3))
       '@regle/nuxt':
-        specifier: 1.25.2
+        specifier: ^1.25.2
         version: 1.25.2(magicast@0.5.3)(typescript@6.0.3)(valibot@1.4.2(typescript@6.0.3))(vue@3.5.40(typescript@6.0.3))(zod@3.25.76)
       '@regle/rules':
         specifier: ^1.25.2
@@ -42,7 +42,7 @@ importers:
         specifier: ^12.9.0
         version: 12.9.0
       nuxt:
-        specifier: 4.5.0
+        specifier: ^4.5.0
         version: 4.5.0(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.0))(@electric-sql/pglite@0.3.16)(@netlify/blobs@10.7.5)(@parcel/watcher@2.5.6)(@types/node@25.7.0)(@vue/compiler-sfc@3.5.40)(better-sqlite3@12.9.0)(crossws@0.4.5(srvx@0.11.22))(db0@0.3.4(@electric-sql/pglite@0.3.16)(better-sqlite3@12.9.0))(esbuild@0.27.7)(eslint@10.3.0(jiti@2.7.0))(ioredis@5.10.1)(lightningcss@1.32.0)(magicast@0.5.3)(optionator@0.9.4)(oxc-parser@0.140.0)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.40(typescript@6.0.3)))(rollup-plugin-visualizer@7.0.1(rolldown@1.2.0)(rollup@4.60.4))(rollup@4.60.4)(srvx@0.11.22)(terser@5.47.1)(typescript@6.0.3)(vite@8.1.5(@types/node@25.7.0)(esbuild@0.27.7)(jiti@2.7.0)(terser@5.47.1)(yaml@2.9.0))(vue-tsc@3.2.8(typescript@6.0.3))(yaml@2.9.0)
       tailwindcss:
         specifier: ^4.2.4
