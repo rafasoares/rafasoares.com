@@ -2,7 +2,8 @@
   "extends": [
     "config:best-practices",
     "config:js-app",
-    "github>nuxt/renovate-config-nuxt"
+    "github>nuxt/renovate-config-nuxt",
+    ":preserveSemverRanges"
   ],
   "lockFileMaintenance": {
     "enabled": true,
