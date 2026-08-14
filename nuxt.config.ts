@@ -11,6 +11,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
 
+    '@comark/nuxt',
+
     '@regle/nuxt',
   ],
 
@@ -40,20 +42,6 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2026-03-30',
-
-  vite: {
-    optimizeDeps: {
-      include: [
-        '@nuxt/ui > prosemirror-state',
-        '@nuxt/ui > prosemirror-transform',
-        '@nuxt/ui > prosemirror-model',
-        '@nuxt/ui > prosemirror-view',
-        '@nuxt/ui > prosemirror-gapcursor',
-        '@regle/rules',
-        '@regle/core',
-      ],
-    },
-  },
 
   typescript: {
     typeCheck: false,
