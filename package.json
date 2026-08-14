@@ -12,25 +12,25 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/tabler": "^1.2.35",
-    "@netlify/nuxt": "^0.3.3",
-    "@nuxt/content": "^3.13.0",
+    "@iconify-json/tabler": "^1.2.38",
+    "@netlify/nuxt": "^0.3.9",
+    "@nuxt/content": "^3.15.2",
     "@nuxt/icon": "2.5.0",
     "@nuxt/image": "2.1.0",
-    "@nuxt/ui": "^4.7.1",
-    "@regle/core": "^1.25.2",
-    "@regle/nuxt": "^1.25.2",
-    "@regle/rules": "^1.25.2",
-    "@vueuse/nuxt": "^14.3.0",
-    "better-sqlite3": "^12.9.0",
-    "nuxt": "^4.5.0",
-    "tailwindcss": "^4.2.4"
+    "@nuxt/ui": "^4.10.0",
+    "@regle/core": "^1.29.0",
+    "@regle/nuxt": "^1.29.0",
+    "@regle/rules": "^1.29.0",
+    "@vueuse/nuxt": "^14.4.0",
+    "better-sqlite3": "^12.11.1",
+    "nuxt": "^4.5.2",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.15.2",
-    "eslint": "^10.3.0",
+    "@nuxt/eslint": "^1.17.0",
+    "eslint": "^10.8.1",
     "typescript": "^6.0.3",
-    "vue-tsc": "^3.2.8"
+    "vue-tsc": "^3.3.9"
   },
   "packageManager": "pnpm@11.21.0+sha512.521705bce689924eac72f5a3587122f362689ef6571e55ba80076fd637c11132ecffada26fad4ea79c485bfddbfd3d5a2a5b05805a77e893de71ec8a6cca3bb1"
 }
