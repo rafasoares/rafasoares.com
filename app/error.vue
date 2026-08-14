@@ -7,14 +7,16 @@ const { error } = defineProps<{
 
 useTitle(`Error ${error.status} - ${error.statusText}`)
 
-function hasPath(data: unknown): data is { path?: string } {
-  return typeof data === 'object' && data !== null && 'path' in data
+function hasPath(data: unknown): data is { path: string } {
+  return typeof data === 'object' && data !== null && 'path' in data && data.path != null
 }
 
 const description = computed(() => {
-  if (error.status !== 404 || !hasPath(error.data)) return error.message || 'An unexpected error occurred.'
+  if (error.status !== 404) return error.message || 'An unexpected error occurred.'
 
-  return `The page \`${error.data?.path}\` does not exist.`
+  if (!hasPath(error.data)) return 'The requested page does not exist.'
+
+  return `The page \`${error.data.path}\` does not exist.`
 })
 </script>
 
@@ -39,7 +41,7 @@ const description = computed(() => {
         </template>
 
         <template #message>
-          <MDC
+          <markdown
             v-if="error.status === 404"
             :value="description"
           />
