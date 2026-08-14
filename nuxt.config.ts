@@ -71,6 +71,10 @@ export default defineNuxtConfig({
     cssLayer: 'base',
     clientBundle: {
       scan: true,
+      icons: [
+        'tabler:sun',
+        'tabler:moon',
+      ],
     },
   },
 })

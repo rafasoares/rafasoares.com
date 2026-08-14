@@ -94,7 +94,7 @@ async function onSubmit() {
     >
       <u-input-menu
         v-model="r$.$value.subject"
-        autocomplete
+        mode="autocomplete"
         clear
         open-on-focus
         placeholder="Select a subject, or write your own"
