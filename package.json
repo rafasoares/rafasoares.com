@@ -22,7 +22,7 @@
     "@regle/nuxt": "^1.29.0",
     "@regle/rules": "^1.29.0",
     "@vueuse/nuxt": "^14.4.0",
-    "better-sqlite3": "^12.11.1",
+    "better-sqlite3": "^13.0.0",
     "nuxt": "^4.5.2",
     "tailwindcss": "^4.3.3"
   },
