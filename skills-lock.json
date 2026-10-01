@@ -1,65 +1,47 @@
 {
   "version": 1,
   "skills": {
-    "impeccable": {
-      "source": "pbakaus/impeccable",
-      "sourceType": "github",
-      "skillPath": "skill/SKILL.md",
-      "computedHash": "8cdf2e788eaca3af7d02026ef9cec55b506100a00d130f938e3fb1ad669c0ad0"
-    },
     "nuxt": {
       "source": "antfu/skills",
       "sourceType": "github",
       "skillPath": "skills/nuxt/SKILL.md",
-      "computedHash": "9e8237ec92083db9a6f4c77d5e5bf4b1d9873d670671235bc75455ee1ca39c74"
+      "computedHash": "03fc229d7c6a300b2ded6d9f984b45d8a554c2c991199c54760893e627c91371"
     },
     "nuxt-ui": {
       "source": "nuxt/ui",
       "sourceType": "github",
       "skillPath": "skills/nuxt-ui/SKILL.md",
-      "computedHash": "2d58c6092b7028db223a819d5a37badc860a4036ca134a3e457ce7b056562f72"
+      "computedHash": "8464b84fce4b31f45156168aaa3da2831db3ca234ad2295734b8599707534199"
     },
     "playwright-cli": {
       "source": "microsoft/playwright-cli",
       "sourceType": "github",
       "skillPath": "skills/playwright-cli/SKILL.md",
-      "computedHash": "84495cfda62b6c012afc4cc34a0c35bfc7923ba35983b8c04ce4cace0f35a5d8"
+      "computedHash": "ffbd59a973d4e2c19c6ecc31254a14497069c362f1d1820b6a6cfbe62de34a73"
     },
     "regle": {
       "source": "victorgarciaesgi/regle",
       "sourceType": "github",
       "skillPath": "skills/regle/SKILL.md",
-      "computedHash": "0e7e97fa0eae5ccb2707e294321129db7beb4d5e0d4b25cac3b6a968374c2d00"
+      "computedHash": "27b1b3bfe9be88fdae4b3008c494e0f6a19c21efaa661510429552bd873cbcd0"
     },
     "regle-advanced": {
       "source": "victorgarciaesgi/regle",
       "sourceType": "github",
       "skillPath": "skills/regle-advanced/SKILL.md",
-      "computedHash": "904dcc603a7554df9186ae730e282b14fc1161e957e812675cb350aa2cb5a7fc"
+      "computedHash": "b90facb025dcedecbed237085437f2d48a0ff949952ccca850653f98d25c4fca"
     },
     "regle-typescript": {
       "source": "victorgarciaesgi/regle",
       "sourceType": "github",
       "skillPath": "skills/regle-typescript/SKILL.md",
-      "computedHash": "9b55b50e4de9e8096e0606d27a34d1b7cb6d0370d3e2b968e80d758a833ab21d"
+      "computedHash": "b50b386195cb3dfd8eb76d67d3b7f0e8cdaaf167c517aadb9820a313aa1fe11c"
     },
     "vue": {
       "source": "antfu/skills",
       "sourceType": "github",
       "skillPath": "skills/vue/SKILL.md",
-      "computedHash": "9c241141e07e836e4f0537c63e8f929fba3767c2997250be38e699f19b75e3f2"
-    },
-    "vue-best-practices": {
-      "source": "antfu/skills",
-      "sourceType": "github",
-      "skillPath": "skills/vue-best-practices/SKILL.md",
-      "computedHash": "d7d22c8cb343583c3904692c4d1d7b50382945e433e4f6e053f4aabb9846cbc3"
-    },
-    "vueuse-functions": {
-      "source": "antfu/skills",
-      "sourceType": "github",
-      "skillPath": "skills/vueuse-functions/SKILL.md",
-      "computedHash": "fedfc78f035a88fe3e9d823f44725fe8981486c55b966c17fbd0d7c28339e49a"
+      "computedHash": "29ad402cf2ff868b3b43160883fbc42e135223655a41d16092d0d205f2c1ed31"
     }
   }
 }
