@@ -14,6 +14,8 @@ export default defineNuxtConfig({
     '@comark/nuxt',
 
     '@regle/nuxt',
+    'vite-doctor/nuxt',
+    'nuxt-skill-hub',
   ],
 
   devtools: {
@@ -64,5 +66,9 @@ export default defineNuxtConfig({
         'tabler:moon',
       ],
     },
+  },
+
+  skillHub: {
+    targets: ['copilot'],
   },
 })

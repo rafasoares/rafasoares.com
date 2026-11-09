@@ -6,6 +6,9 @@ allowBuilds:
   unrs-resolver: true
   vue-demi: true
 
+patchedDependencies:
+  unagent: patches/unagent.patch
+
 supportedArchitectures:
   os:
     - current

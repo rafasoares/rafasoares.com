@@ -1,0 +1,804 @@
+diff --git a/dist/env-DDMiJ4tI.js b/dist/env-DDMiJ4tI.js
+index c3dfaec499d0099d1e0fa8119e293729dbb474cd..011fe15d908c5f48b71f3dad5a1ceeba32b53bab 100644
+--- a/dist/env-DDMiJ4tI.js
++++ b/dist/env-DDMiJ4tI.js
+@@ -5,413 +5,414 @@ import { hasTTY, isCI } from "std-env";
+ 
+ //#region src/env/agents.ts
+ const agents = {
+-	"claude-code": {
+-		name: "Claude Code",
+-		configDir: "~/.claude",
+-		rulesFile: "CLAUDE.md",
+-		skillsDir: "skills",
+-		legacySkillsDirs: [".agents/skills"],
+-		envDetect: ["CLAUDE_CODE", "CLAUDE_CODE_ENTRY"],
+-		description: "Anthropic's official CLI for Claude"
+-	},
+-	"cursor": {
+-		name: "Cursor",
+-		configDir: "~/.cursor",
+-		rulesFile: ".cursorrules",
+-		skillsDir: "rules",
+-		envDetect: ["CURSOR_SESSION_ID"],
+-		description: "AI-powered code editor"
+-	},
+-	"windsurf": {
+-		name: "Windsurf",
+-		configDir: "~/.codeium/windsurf",
+-		rulesFile: ".windsurfrules",
+-		skillsDir: "rules",
+-		envDetect: ["WINDSURF_SESSION_ID"],
+-		description: "Codeium's AI code editor"
+-	},
+-	"cline": {
+-		name: "Cline",
+-		configDir: "~/.cline",
+-		rulesFile: ".clinerules",
+-		skillsDir: "rules",
+-		envDetect: ["CLINE_TASK"],
+-		description: "VS Code extension for Claude"
+-	},
+-	"aider": {
+-		name: "Aider",
+-		configDir: "~/.aider",
+-		rulesFile: ".aider.conf.yml",
+-		envDetect: ["AIDER_MODEL"],
+-		description: "AI pair programming in terminal"
+-	},
+-	"continue": {
+-		name: "Continue",
+-		configDir: "~/.continue",
+-		rulesFile: "config.json",
+-		skillsDir: "rules",
+-		envDetect: ["CONTINUE_GLOBAL_DIR"],
+-		description: "Open-source AI code assistant"
+-	},
+-	"copilot": {
+-		name: "GitHub Copilot",
+-		configDir: "~/.config/github-copilot",
+-		envDetect: ["GITHUB_COPILOT_TOKEN"],
+-		description: "GitHub's AI pair programmer"
+-	},
+-	"codex": {
+-		name: "OpenAI Codex CLI",
+-		configDir: "~/.codex",
+-		rulesFile: "instructions.md",
+-		envDetect: ["CODEX_HOME"],
+-		description: "OpenAI's Codex CLI"
+-	},
+-	"zed": {
+-		name: "Zed",
+-		configDir: "~/.config/zed",
+-		rulesFile: "settings.json",
+-		envDetect: ["ZED_IMPERSONATE"],
+-		description: "High-performance code editor with AI"
+-	},
+-	"void": {
+-		name: "Void",
+-		configDir: "~/.void",
+-		rulesFile: ".voidrules",
+-		envDetect: ["VOID_EDITOR"],
+-		description: "Open-source Cursor alternative"
+-	},
+-	"amp": {
+-		name: "Amp",
+-		configDir: "~/.amp",
+-		rulesFile: "amp.md",
+-		skillsDir: "skills",
+-		legacySkillsDirs: [".agents/skills"],
+-		envDetect: ["AMP_SESSION"],
+-		description: "Sourcegraph's AI coding agent"
+-	},
+-	"roo": {
+-		name: "Roo Code",
+-		configDir: "~/.roo",
+-		rulesFile: ".roorules",
+-		skillsDir: "rules",
+-		envDetect: ["ROO_CODE"],
+-		description: "AI coding assistant"
+-	},
+-	"avante": {
+-		name: "Avante",
+-		configDir: "~/.config/nvim",
+-		rulesFile: "avante.lua",
+-		envDetect: ["AVANTE_PROVIDER"],
+-		description: "Neovim AI plugin"
+-	},
+-	"codestory": {
+-		name: "CodeStory",
+-		configDir: "~/.codestory",
+-		rulesFile: ".codestoryrules",
+-		envDetect: ["CODESTORY_SESSION"],
+-		description: "AI-powered code editor"
+-	},
+-	"gpt-engineer": {
+-		name: "GPT Engineer",
+-		configDir: "~/.gpt-engineer",
+-		rulesFile: "prompt",
+-		envDetect: ["GPTE_API_KEY"],
+-		description: "AI code generation"
+-	},
+-	"sweep": {
+-		name: "Sweep",
+-		configDir: "~/.sweep",
+-		rulesFile: "sweep.yaml",
+-		envDetect: ["SWEEP_API_KEY"],
+-		description: "AI junior developer"
+-	},
+-	"mentat": {
+-		name: "Mentat",
+-		configDir: "~/.mentat",
+-		rulesFile: ".mentat_config.json",
+-		envDetect: ["MENTAT_API_KEY"],
+-		description: "AI coding assistant"
+-	},
+-	"goose": {
+-		name: "Goose",
+-		configDir: "~/.config/goose",
+-		rulesFile: "config.yaml",
+-		envDetect: ["GOOSE_PROVIDER"],
+-		description: "Block's AI agent"
+-	},
+-	"supermaven": {
+-		name: "Supermaven",
+-		configDir: "~/.supermaven",
+-		envDetect: ["SUPERMAVEN_API_KEY"],
+-		description: "Fast AI code completion"
+-	},
+-	"tabnine": {
+-		name: "Tabnine",
+-		configDir: "~/.tabnine",
+-		envDetect: ["TABNINE_API_KEY"],
+-		description: "AI code completion"
+-	},
+-	"codeium": {
+-		name: "Codeium",
+-		configDir: "~/.codeium",
+-		envDetect: ["CODEIUM_API_KEY"],
+-		description: "Free AI code completion"
+-	},
+-	"sourcegraph-cody": {
+-		name: "Sourcegraph Cody",
+-		configDir: "~/.sourcegraph",
+-		rulesFile: "cody.json",
+-		envDetect: ["SRC_ACCESS_TOKEN"],
+-		description: "Sourcegraph's AI assistant"
+-	},
+-	"amazon-q": {
+-		name: "Amazon Q",
+-		configDir: "~/.aws/amazonq",
+-		envDetect: ["AMAZON_Q_TOKEN"],
+-		description: "AWS AI assistant"
+-	},
+-	"gemini-code-assist": {
+-		name: "Gemini Code Assist",
+-		configDir: "~/.config/google-cloud",
+-		envDetect: ["GOOGLE_APPLICATION_CREDENTIALS"],
+-		description: "Google's AI coding assistant"
+-	},
+-	"replit-agent": {
+-		name: "Replit Agent",
+-		configDir: "~/.replit",
+-		rulesFile: ".replit",
+-		envDetect: ["REPL_ID"],
+-		description: "Replit's AI agent"
+-	},
+-	"devin": {
+-		name: "Devin",
+-		configDir: "~/.devin",
+-		envDetect: ["DEVIN_API_KEY"],
+-		description: "Cognition's AI software engineer"
+-	},
+-	"bolt": {
+-		name: "Bolt",
+-		configDir: "~/.bolt",
+-		envDetect: ["BOLT_API_KEY"],
+-		description: "StackBlitz AI"
+-	},
+-	"v0": {
+-		name: "v0",
+-		configDir: "~/.v0",
+-		envDetect: ["V0_API_KEY"],
+-		description: "Vercel's AI UI generator"
+-	},
+-	"lovable": {
+-		name: "Lovable",
+-		configDir: "~/.lovable",
+-		envDetect: ["LOVABLE_API_KEY"],
+-		description: "AI full-stack developer"
+-	},
+-	"pythagora": {
+-		name: "Pythagora",
+-		configDir: "~/.pythagora",
+-		rulesFile: "prompts.json",
+-		envDetect: ["PYTHAGORA_API_KEY"],
+-		description: "AI developer"
+-	},
+-	"smol-developer": {
+-		name: "Smol Developer",
+-		configDir: "~/.smol",
+-		rulesFile: "prompt.md",
+-		envDetect: ["SMOL_AI_KEY"],
+-		description: "AI junior developer"
+-	},
+-	"plandex": {
+-		name: "Plandex",
+-		configDir: "~/.plandex",
+-		rulesFile: "plandex.yaml",
+-		envDetect: ["PLANDEX_API_KEY"],
+-		description: "AI coding agent for complex tasks"
+-	},
+-	"auto-gpt": {
+-		name: "Auto-GPT",
+-		configDir: "~/.auto-gpt",
+-		rulesFile: "ai_settings.yaml",
+-		envDetect: ["AUTO_GPT_KEY"],
+-		description: "Autonomous GPT-4 agent"
+-	},
+-	"agent-gpt": {
+-		name: "AgentGPT",
+-		configDir: "~/.agent-gpt",
+-		envDetect: ["AGENT_GPT_KEY"],
+-		description: "Browser-based AI agent"
+-	},
+-	"babyagi": {
+-		name: "BabyAGI",
+-		configDir: "~/.babyagi",
+-		envDetect: ["BABY_AGI_KEY"],
+-		description: "Task-driven AI agent"
+-	},
+-	"langchain-agent": {
+-		name: "LangChain Agent",
+-		configDir: "~/.langchain",
+-		envDetect: ["LANGCHAIN_API_KEY"],
+-		description: "LangChain-based agents"
+-	},
+-	"crewai": {
+-		name: "CrewAI",
+-		configDir: "~/.crewai",
+-		rulesFile: "agents.yaml",
+-		envDetect: ["CREWAI_API_KEY"],
+-		description: "Multi-agent orchestration"
+-	},
+-	"autogen": {
+-		name: "AutoGen",
+-		configDir: "~/.autogen",
+-		rulesFile: "OAI_CONFIG_LIST",
+-		envDetect: ["AUTOGEN_USE_DOCKER"],
+-		description: "Microsoft's multi-agent framework"
+-	},
+-	"chatdev": {
+-		name: "ChatDev",
+-		configDir: "~/.chatdev",
+-		rulesFile: "config.yaml",
+-		envDetect: ["CHATDEV_KEY"],
+-		description: "AI software company"
+-	},
+-	"metagpt": {
+-		name: "MetaGPT",
+-		configDir: "~/.metagpt",
+-		rulesFile: "config2.yaml",
+-		envDetect: ["METAGPT_KEY"],
+-		description: "Multi-agent software company"
+-	},
+-	"superagi": {
+-		name: "SuperAGI",
+-		configDir: "~/.superagi",
+-		envDetect: ["SUPERAGI_KEY"],
+-		description: "Open-source AGI framework"
+-	},
+-	"jarvis": {
+-		name: "Jarvis",
+-		configDir: "~/.jarvis",
+-		envDetect: ["JARVIS_API_KEY"],
+-		description: "AI assistant"
+-	},
+-	"claude-engineer": {
+-		name: "Claude Engineer",
+-		configDir: "~/.claude-engineer",
+-		rulesFile: "system_prompt.txt",
+-		envDetect: ["CLAUDE_ENGINEER"],
+-		description: "Claude-based coding assistant"
+-	},
+-	"codegeex": {
+-		name: "CodeGeeX",
+-		configDir: "~/.codegeex",
+-		envDetect: ["CODEGEEX_API_KEY"],
+-		description: "AI code assistant"
+-	},
+-	"safurai": {
+-		name: "Safurai",
+-		configDir: "~/.safurai",
+-		envDetect: ["SAFURAI_API_KEY"],
+-		description: "AI code assistant"
+-	},
+-	"codegpt": {
+-		name: "CodeGPT",
+-		configDir: "~/.codegpt",
+-		envDetect: ["CODEGPT_API_KEY"],
+-		description: "VS Code AI extension"
+-	},
+-	"trae": {
+-		name: "Trae AI",
+-		configDir: "~/.trae",
+-		rulesFile: "rules/project_rules.md",
+-		description: "AI-powered code editor"
+-	}
++  "claude-code": {
++    name: "Claude Code",
++    configDir: "~/.claude",
++    rulesFile: "CLAUDE.md",
++    skillsDir: "skills",
++    legacySkillsDirs: [".agents/skills"],
++    envDetect: ["CLAUDE_CODE", "CLAUDE_CODE_ENTRY"],
++    description: "Anthropic's official CLI for Claude"
++  },
++  "cursor": {
++    name: "Cursor",
++    configDir: "~/.cursor",
++    rulesFile: ".cursorrules",
++    skillsDir: "rules",
++    envDetect: ["CURSOR_SESSION_ID"],
++    description: "AI-powered code editor"
++  },
++  "windsurf": {
++    name: "Windsurf",
++    configDir: "~/.codeium/windsurf",
++    rulesFile: ".windsurfrules",
++    skillsDir: "rules",
++    envDetect: ["WINDSURF_SESSION_ID"],
++    description: "Codeium's AI code editor"
++  },
++  "cline": {
++    name: "Cline",
++    configDir: "~/.cline",
++    rulesFile: ".clinerules",
++    skillsDir: "rules",
++    envDetect: ["CLINE_TASK"],
++    description: "VS Code extension for Claude"
++  },
++  "aider": {
++    name: "Aider",
++    configDir: "~/.aider",
++    rulesFile: ".aider.conf.yml",
++    envDetect: ["AIDER_MODEL"],
++    description: "AI pair programming in terminal"
++  },
++  "continue": {
++    name: "Continue",
++    configDir: "~/.continue",
++    rulesFile: "config.json",
++    skillsDir: "rules",
++    envDetect: ["CONTINUE_GLOBAL_DIR"],
++    description: "Open-source AI code assistant"
++  },
++  "copilot": {
++    name: "GitHub Copilot",
++    configDir: "~/.agents",
++    skillsDir: "skills",
++    envDetect: ["GITHUB_COPILOT_TOKEN"],
++    description: "GitHub's AI pair programmer"
++  },
++  "codex": {
++    name: "OpenAI Codex CLI",
++    configDir: "~/.codex",
++    rulesFile: "instructions.md",
++    envDetect: ["CODEX_HOME"],
++    description: "OpenAI's Codex CLI"
++  },
++  "zed": {
++    name: "Zed",
++    configDir: "~/.config/zed",
++    rulesFile: "settings.json",
++    envDetect: ["ZED_IMPERSONATE"],
++    description: "High-performance code editor with AI"
++  },
++  "void": {
++    name: "Void",
++    configDir: "~/.void",
++    rulesFile: ".voidrules",
++    envDetect: ["VOID_EDITOR"],
++    description: "Open-source Cursor alternative"
++  },
++  "amp": {
++    name: "Amp",
++    configDir: "~/.amp",
++    rulesFile: "amp.md",
++    skillsDir: "skills",
++    legacySkillsDirs: [".agents/skills"],
++    envDetect: ["AMP_SESSION"],
++    description: "Sourcegraph's AI coding agent"
++  },
++  "roo": {
++    name: "Roo Code",
++    configDir: "~/.roo",
++    rulesFile: ".roorules",
++    skillsDir: "rules",
++    envDetect: ["ROO_CODE"],
++    description: "AI coding assistant"
++  },
++  "avante": {
++    name: "Avante",
++    configDir: "~/.config/nvim",
++    rulesFile: "avante.lua",
++    envDetect: ["AVANTE_PROVIDER"],
++    description: "Neovim AI plugin"
++  },
++  "codestory": {
++    name: "CodeStory",
++    configDir: "~/.codestory",
++    rulesFile: ".codestoryrules",
++    envDetect: ["CODESTORY_SESSION"],
++    description: "AI-powered code editor"
++  },
++  "gpt-engineer": {
++    name: "GPT Engineer",
++    configDir: "~/.gpt-engineer",
++    rulesFile: "prompt",
++    envDetect: ["GPTE_API_KEY"],
++    description: "AI code generation"
++  },
++  "sweep": {
++    name: "Sweep",
++    configDir: "~/.sweep",
++    rulesFile: "sweep.yaml",
++    envDetect: ["SWEEP_API_KEY"],
++    description: "AI junior developer"
++  },
++  "mentat": {
++    name: "Mentat",
++    configDir: "~/.mentat",
++    rulesFile: ".mentat_config.json",
++    envDetect: ["MENTAT_API_KEY"],
++    description: "AI coding assistant"
++  },
++  "goose": {
++    name: "Goose",
++    configDir: "~/.config/goose",
++    rulesFile: "config.yaml",
++    envDetect: ["GOOSE_PROVIDER"],
++    description: "Block's AI agent"
++  },
++  "supermaven": {
++    name: "Supermaven",
++    configDir: "~/.supermaven",
++    envDetect: ["SUPERMAVEN_API_KEY"],
++    description: "Fast AI code completion"
++  },
++  "tabnine": {
++    name: "Tabnine",
++    configDir: "~/.tabnine",
++    envDetect: ["TABNINE_API_KEY"],
++    description: "AI code completion"
++  },
++  "codeium": {
++    name: "Codeium",
++    configDir: "~/.codeium",
++    envDetect: ["CODEIUM_API_KEY"],
++    description: "Free AI code completion"
++  },
++  "sourcegraph-cody": {
++    name: "Sourcegraph Cody",
++    configDir: "~/.sourcegraph",
++    rulesFile: "cody.json",
++    envDetect: ["SRC_ACCESS_TOKEN"],
++    description: "Sourcegraph's AI assistant"
++  },
++  "amazon-q": {
++    name: "Amazon Q",
++    configDir: "~/.aws/amazonq",
++    envDetect: ["AMAZON_Q_TOKEN"],
++    description: "AWS AI assistant"
++  },
++  "gemini-code-assist": {
++    name: "Gemini Code Assist",
++    configDir: "~/.config/google-cloud",
++    envDetect: ["GOOGLE_APPLICATION_CREDENTIALS"],
++    description: "Google's AI coding assistant"
++  },
++  "replit-agent": {
++    name: "Replit Agent",
++    configDir: "~/.replit",
++    rulesFile: ".replit",
++    envDetect: ["REPL_ID"],
++    description: "Replit's AI agent"
++  },
++  "devin": {
++    name: "Devin",
++    configDir: "~/.devin",
++    envDetect: ["DEVIN_API_KEY"],
++    description: "Cognition's AI software engineer"
++  },
++  "bolt": {
++    name: "Bolt",
++    configDir: "~/.bolt",
++    envDetect: ["BOLT_API_KEY"],
++    description: "StackBlitz AI"
++  },
++  "v0": {
++    name: "v0",
++    configDir: "~/.v0",
++    envDetect: ["V0_API_KEY"],
++    description: "Vercel's AI UI generator"
++  },
++  "lovable": {
++    name: "Lovable",
++    configDir: "~/.lovable",
++    envDetect: ["LOVABLE_API_KEY"],
++    description: "AI full-stack developer"
++  },
++  "pythagora": {
++    name: "Pythagora",
++    configDir: "~/.pythagora",
++    rulesFile: "prompts.json",
++    envDetect: ["PYTHAGORA_API_KEY"],
++    description: "AI developer"
++  },
++  "smol-developer": {
++    name: "Smol Developer",
++    configDir: "~/.smol",
++    rulesFile: "prompt.md",
++    envDetect: ["SMOL_AI_KEY"],
++    description: "AI junior developer"
++  },
++  "plandex": {
++    name: "Plandex",
++    configDir: "~/.plandex",
++    rulesFile: "plandex.yaml",
++    envDetect: ["PLANDEX_API_KEY"],
++    description: "AI coding agent for complex tasks"
++  },
++  "auto-gpt": {
++    name: "Auto-GPT",
++    configDir: "~/.auto-gpt",
++    rulesFile: "ai_settings.yaml",
++    envDetect: ["AUTO_GPT_KEY"],
++    description: "Autonomous GPT-4 agent"
++  },
++  "agent-gpt": {
++    name: "AgentGPT",
++    configDir: "~/.agent-gpt",
++    envDetect: ["AGENT_GPT_KEY"],
++    description: "Browser-based AI agent"
++  },
++  "babyagi": {
++    name: "BabyAGI",
++    configDir: "~/.babyagi",
++    envDetect: ["BABY_AGI_KEY"],
++    description: "Task-driven AI agent"
++  },
++  "langchain-agent": {
++    name: "LangChain Agent",
++    configDir: "~/.langchain",
++    envDetect: ["LANGCHAIN_API_KEY"],
++    description: "LangChain-based agents"
++  },
++  "crewai": {
++    name: "CrewAI",
++    configDir: "~/.crewai",
++    rulesFile: "agents.yaml",
++    envDetect: ["CREWAI_API_KEY"],
++    description: "Multi-agent orchestration"
++  },
++  "autogen": {
++    name: "AutoGen",
++    configDir: "~/.autogen",
++    rulesFile: "OAI_CONFIG_LIST",
++    envDetect: ["AUTOGEN_USE_DOCKER"],
++    description: "Microsoft's multi-agent framework"
++  },
++  "chatdev": {
++    name: "ChatDev",
++    configDir: "~/.chatdev",
++    rulesFile: "config.yaml",
++    envDetect: ["CHATDEV_KEY"],
++    description: "AI software company"
++  },
++  "metagpt": {
++    name: "MetaGPT",
++    configDir: "~/.metagpt",
++    rulesFile: "config2.yaml",
++    envDetect: ["METAGPT_KEY"],
++    description: "Multi-agent software company"
++  },
++  "superagi": {
++    name: "SuperAGI",
++    configDir: "~/.superagi",
++    envDetect: ["SUPERAGI_KEY"],
++    description: "Open-source AGI framework"
++  },
++  "jarvis": {
++    name: "Jarvis",
++    configDir: "~/.jarvis",
++    envDetect: ["JARVIS_API_KEY"],
++    description: "AI assistant"
++  },
++  "claude-engineer": {
++    name: "Claude Engineer",
++    configDir: "~/.claude-engineer",
++    rulesFile: "system_prompt.txt",
++    envDetect: ["CLAUDE_ENGINEER"],
++    description: "Claude-based coding assistant"
++  },
++  "codegeex": {
++    name: "CodeGeeX",
++    configDir: "~/.codegeex",
++    envDetect: ["CODEGEEX_API_KEY"],
++    description: "AI code assistant"
++  },
++  "safurai": {
++    name: "Safurai",
++    configDir: "~/.safurai",
++    envDetect: ["SAFURAI_API_KEY"],
++    description: "AI code assistant"
++  },
++  "codegpt": {
++    name: "CodeGPT",
++    configDir: "~/.codegpt",
++    envDetect: ["CODEGPT_API_KEY"],
++    description: "VS Code AI extension"
++  },
++  "trae": {
++    name: "Trae AI",
++    configDir: "~/.trae",
++    rulesFile: "rules/project_rules.md",
++    description: "AI-powered code editor"
++  }
+ };
+-function getAgentConfig(agentId) {
+-	return agents[agentId];
++function getAgentConfig (agentId) {
++  return agents[agentId];
+ }
+-function getAgentIds() {
+-	return Object.keys(agents);
++function getAgentIds () {
++  return Object.keys(agents);
+ }
+-function getAllAgents() {
+-	return Object.values(agents);
++function getAllAgents () {
++  return Object.values(agents);
+ }
+ 
+ //#endregion
+ //#region src/env/paths.ts
+-function getXDGPaths() {
+-	const home = homedir();
+-	return {
+-		data: process.env.XDG_DATA_HOME || join(home, ".local", "share"),
+-		config: process.env.XDG_CONFIG_HOME || join(home, ".config"),
+-		cache: process.env.XDG_CACHE_HOME || join(home, ".cache"),
+-		state: process.env.XDG_STATE_HOME || join(home, ".local", "state")
+-	};
++function getXDGPaths () {
++  const home = homedir();
++  return {
++    data: process.env.XDG_DATA_HOME || join(home, ".local", "share"),
++    config: process.env.XDG_CONFIG_HOME || join(home, ".config"),
++    cache: process.env.XDG_CACHE_HOME || join(home, ".cache"),
++    state: process.env.XDG_STATE_HOME || join(home, ".local", "state")
++  };
+ }
+-function getAgentConfigDir(agent) {
+-	return expandPath(agent.configDir);
++function getAgentConfigDir (agent) {
++  return expandPath(agent.configDir);
+ }
+-function getAgentRulesPath(agent) {
+-	if (!agent.rulesFile) return void 0;
+-	return join(getAgentConfigDir(agent), agent.rulesFile);
++function getAgentRulesPath (agent) {
++  if (!agent.rulesFile) return void 0;
++  return join(getAgentConfigDir(agent), agent.rulesFile);
+ }
+-function getAgentSkillsDir(agent) {
+-	return getAgentSkillsDirs(agent)[0];
++function getAgentSkillsDir (agent) {
++  return getAgentSkillsDirs(agent)[0];
+ }
+-function getAgentSkillsDirs(agent) {
+-	const dirs = [];
+-	if (agent.skillsDir) dirs.push(agent.skillsDir);
+-	if (agent.legacySkillsDirs && agent.legacySkillsDirs.length > 0) dirs.push(...agent.legacySkillsDirs);
+-	if (dirs.length === 0) return [];
+-	const configDir = getAgentConfigDir(agent);
+-	const seen = /* @__PURE__ */ new Set();
+-	const resolved = [];
+-	for (const dir of dirs) {
+-		const path = join(configDir, dir);
+-		if (seen.has(path)) continue;
+-		seen.add(path);
+-		resolved.push(path);
+-	}
+-	return resolved;
++function getAgentSkillsDirs (agent) {
++  const dirs = [];
++  if (agent.skillsDir) dirs.push(agent.skillsDir);
++  if (agent.legacySkillsDirs && agent.legacySkillsDirs.length > 0) dirs.push(...agent.legacySkillsDirs);
++  if (dirs.length === 0) return [];
++  const configDir = getAgentConfigDir(agent);
++  const seen = /* @__PURE__ */ new Set();
++  const resolved = [];
++  for (const dir of dirs) {
++    const path = join(configDir, dir);
++    if (seen.has(path)) continue;
++    seen.add(path);
++    resolved.push(path);
++  }
++  return resolved;
+ }
+-function agentConfigExists(agent) {
+-	return existsSync(getAgentConfigDir(agent));
++function agentConfigExists (agent) {
++  return existsSync(getAgentConfigDir(agent));
+ }
+ /** @deprecated Use `hasTTY` from std-env instead */
+ const isTTY = hasTTY;
+-function expandPath(filepath) {
+-	if (filepath.startsWith("~")) return `${normalize(homedir())}${filepath.slice(1)}`;
+-	return resolve(filepath);
++function expandPath (filepath) {
++  if (filepath.startsWith("~")) return `${normalize(homedir())}${filepath.slice(1)}`;
++  return resolve(filepath);
+ }
+ 
+ //#endregion
+ //#region src/env/detect.ts
+-function detectAgentByEnv(agent) {
+-	if (!agent.envDetect) return false;
+-	return agent.envDetect.some((envVar) => !!process.env[envVar]);
++function detectAgentByEnv (agent) {
++  if (!agent.envDetect) return false;
++  return agent.envDetect.some((envVar) => !!process.env[envVar]);
+ }
+-function detectCurrentAgent() {
+-	for (const [id, config] of Object.entries(agents)) if (detectAgentByEnv(config)) return {
+-		id,
+-		config,
+-		detected: agentConfigExists(config) ? "both" : "env"
+-	};
++function detectCurrentAgent () {
++  for (const [id, config] of Object.entries(agents)) if (detectAgentByEnv(config)) return {
++    id,
++    config,
++    detected: agentConfigExists(config) ? "both" : "env"
++  };
+ }
+-function detectInstalledAgents() {
+-	const detected = [];
+-	for (const [id, config] of Object.entries(agents)) {
+-		const envDetected = detectAgentByEnv(config);
+-		const configExists = agentConfigExists(config);
+-		if (envDetected || configExists) detected.push({
+-			id,
+-			config,
+-			detected: envDetected && configExists ? "both" : envDetected ? "env" : "config"
+-		});
+-	}
+-	return detected;
++function detectInstalledAgents () {
++  const detected = [];
++  for (const [id, config] of Object.entries(agents)) {
++    const envDetected = detectAgentByEnv(config);
++    const configExists = agentConfigExists(config);
++    if (envDetected || configExists) detected.push({
++      id,
++      config,
++      detected: envDetected && configExists ? "both" : envDetected ? "env" : "config"
++    });
++  }
++  return detected;
+ }
+-function isRunningInAgent(agentId) {
+-	const config = getAgentConfig(agentId);
+-	if (!config) return false;
+-	return detectAgentByEnv(config);
++function isRunningInAgent (agentId) {
++  const config = getAgentConfig(agentId);
++  if (!config) return false;
++  return detectAgentByEnv(config);
+ }
+ 
+ //#endregion
