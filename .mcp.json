@@ -1,0 +1,14 @@
+{
+	"mcpServers": {
+		"regle": {
+			"type": "stdio",
+			"command": "pnx",
+			"args": [
+				"@regle/mcp-server"
+			],
+			"tools": [
+				"*"
+			]
+		}
+	}
+}
