@@ -18,7 +18,10 @@ jobs:
           cache: true
 
       - name: Lint
-        run: pnpm run lint
+        run: pnpm lint
+
+      - name: Check for issues (Vite, Nuxt, Vue, etc.)
+        run: pnpm check:doctor
 
       - name: Typecheck
-        run: pnpm run typecheck
+        run: pnpm typecheck
