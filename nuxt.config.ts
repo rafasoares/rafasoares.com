@@ -68,6 +68,6 @@ export default defineNuxtConfig({
   },
 
   skillHub: {
-    targets: ['copilot'],
+    targets: ['universal'],
   },
 })

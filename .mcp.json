@@ -1,14 +1,21 @@
 {
-	"mcpServers": {
-		"regle": {
-			"type": "stdio",
-			"command": "pnx",
-			"args": [
-				"@regle/mcp-server"
-			],
-			"tools": [
-				"*"
-			]
-		}
-	}
+  "mcpServers": {
+    "regle": {
+      "type": "stdio",
+      "command": "pnx",
+      "args": [
+        "@regle/mcp-server"
+      ],
+      "tools": [
+        "*"
+      ]
+    },
+    "nuxt": {
+      "url": "https://nuxt.com/mcp",
+      "type": "http",
+      "tools": [
+        "*"
+      ]
+    }
+  }
 }
