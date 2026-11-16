@@ -14,7 +14,6 @@ export default defineNuxtConfig({
     '@regle/nuxt',
     'vite-doctor/nuxt',
     'nuxt-skill-hub',
-    '@comark/vue/nuxt',
   ],
 
   devtools: {

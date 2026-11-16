@@ -10,14 +10,6 @@ useTitle(`Error ${error.status} - ${error.statusText}`)
 function hasPath(data: unknown): data is { path: string } {
   return typeof data === 'object' && data !== null && 'path' in data && data.path != null
 }
-
-const description = computed(() => {
-  if (error.status !== 404) return error.message || 'An unexpected error occurred.'
-
-  if (!hasPath(error.data)) return 'The requested page does not exist.'
-
-  return `The page \`${error.data.path}\` does not exist.`
-})
 </script>
 
 <template>
@@ -39,12 +31,23 @@ const description = computed(() => {
         >
           Page not found
         </template>
+        <template
+          v-if="error.status === 404"
+          #message
+        >
+          <p v-if="hasPath(error.data)">
+            The page <prose-code>{{ error.data.path }}</prose-code> does not exist.
+          </p>
+          <p v-else>
+            The requested page does not exist.
+          </p>
+        </template>
 
-        <template #message>
-          <markdown
-            v-if="error.status === 404"
-            :value="description"
-          />
+        <template
+          v-else
+          #message
+        >
+          <p>An unexpected error occurred.</p>
         </template>
       </u-error>
 
