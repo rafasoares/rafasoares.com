@@ -11,11 +11,10 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
 
-    '@comark/nuxt',
-
     '@regle/nuxt',
     'vite-doctor/nuxt',
     'nuxt-skill-hub',
+    '@comark/vue/nuxt',
   ],
 
   devtools: {
