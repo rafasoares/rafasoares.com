@@ -1,6 +1,28 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+@source "../../../content/**/*";
+
 @theme static {
   --font-sans: 'DM Sans', sans-serif;
+}
+
+@property --spotlight-x {
+  syntax: '<length-percentage>';
+  inherits: true;
+  initial-value: 0px;
+}
+
+@property --spotlight-y {
+  syntax: '<length-percentage>';
+  inherits: true;
+  initial-value: 0px;
+}
+
+@layer theme {
+  .bg-hero {
+    background-image:
+      linear-gradient(to bottom, transparent, var(--ui-bg)),
+      radial-gradient(farthest-side at bottom right, var(--color-primary-500) 0%, transparent 100%);
+  }
 }

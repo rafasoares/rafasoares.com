@@ -8,6 +8,7 @@
     "cleanup": "nuxt cleanup && pnpm clean",
     "dev": "nuxt dev",
     "preinstall": "npx only-allow pnpm",
+    "prepare": "nuxt prepare",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
