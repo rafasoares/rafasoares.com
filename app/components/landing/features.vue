@@ -37,6 +37,7 @@ const features = ref<PageFeatureProps[]>([
 
 <template>
   <u-page-section
+    id="arsenal"
     title="Technical Arsenal"
     description="A modern stack of technologies to build high-quality applications. From frontend to backend, and everything in between."
     :features

@@ -29,7 +29,7 @@ const links = ref<ButtonProps[]>([
 <template>
   <u-page-hero
     orientation="horizontal"
-    :class="$style.hero"
+    class="bg-hero"
     :links
   >
     <template #title>
@@ -43,18 +43,7 @@ const links = ref<ButtonProps[]>([
     </template>
 
     <template #headline>
-      <u-badge
-        color="success"
-        variant="soft"
-        class="rounded-full"
-      >
-        <u-chip
-          color="success"
-          standalone
-          inset
-        />
-        Available for contract and full-time work
-      </u-badge>
+      <app-status-badge />
     </template>
 
     <div class="relative size-full drop-shadow-lg">
@@ -75,11 +64,3 @@ const links = ref<ButtonProps[]>([
     </div>
   </u-page-hero>
 </template>
-
-<style module>
-.hero {
-  background-image:
-    linear-gradient(to bottom, transparent, var(--ui-bg)),
-    radial-gradient(farthest-side at bottom right, var(--color-primary-500) 0%, transparent 100%);
-}
-</style>

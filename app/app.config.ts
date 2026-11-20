@@ -80,5 +80,10 @@ export default defineAppConfig({
         root: 'w-full',
       },
     },
+    pageSection: {
+      slots: {
+        container: 'py-8 sm:py-12 lg:py-16',
+      },
+    },
   },
 })

@@ -3,8 +3,9 @@ useTitle('Home')
 </script>
 
 <template>
-  <u-page-body>
+  <u-page>
     <landing-hero />
     <landing-features />
-  </u-page-body>
+    <contact-banner />
+  </u-page>
 </template>
