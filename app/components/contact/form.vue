@@ -1,18 +1,15 @@
 <script lang="ts" setup>
-import { email, required } from '@regle/rules'
+import type { FormSubmitEvent } from '@nuxt/ui'
+import { contactSchema } from '#shared/schemas/contact'
 
 const toast = useToast()
 
-const { r$ } = useRegle({
+const state = reactive<ContactSchema>({
   name: '',
   email: '',
   subject: '',
   message: '',
   address: '',
-}, {
-  name: { required },
-  email: { required, email },
-  message: { required },
 })
 
 const subjects = ref([
@@ -21,18 +18,11 @@ const subjects = ref([
   'Partnership',
 ])
 
-async function onSubmit() {
+async function onSubmit(event: FormSubmitEvent<ContactSchema>) {
   try {
-    const body = new URLSearchParams()
-
-    body.append('form-name', 'contact')
-    Object.entries(r$.$value).forEach(([key, value]) => {
-      body.append(key, value)
-    })
-
-    await $fetch('/contact/success', {
+    await $fetch('/api/contact', {
       method: 'POST',
-      body,
+      body: event.data,
     })
 
     navigateTo('/contact/success')
@@ -53,37 +43,29 @@ async function onSubmit() {
 
 <template>
   <u-form
-    id="contact"
-    :schema="r$"
-    :state="r$.$value"
+    :schema="contactSchema"
+    :state="state"
     :validate-on="['input', 'change']"
-    data-netlify="true"
-    data-netlify-honeypot="address"
     @submit="onSubmit"
   >
-    <u-input
-      type="hidden"
-      name="form-name"
-      value="contact"
-    />
-
     <u-form-field
       required
       label="Name"
       name="name"
     >
       <u-input
-        v-model="r$.$value.name"
+        v-model="state.name"
         placeholder="Your name"
       />
     </u-form-field>
+
     <u-form-field
       required
       label="Email"
       name="email"
     >
       <u-input
-        v-model="r$.$value.email"
+        v-model="state.email"
         placeholder="Your email"
       />
     </u-form-field>
@@ -93,7 +75,7 @@ async function onSubmit() {
       name="subject"
     >
       <u-input-menu
-        v-model="r$.$value.subject"
+        v-model="state.subject"
         mode="autocomplete"
         clear
         open-on-focus
@@ -109,7 +91,7 @@ async function onSubmit() {
       name="message"
     >
       <u-textarea
-        v-model="r$.$value.message"
+        v-model="state.message"
         placeholder="Your message"
         autoresize
         :ui="{ base: 'min-h-72' }"
@@ -122,7 +104,7 @@ async function onSubmit() {
       label="Skip this field"
     >
       <u-input
-        v-model="r$.$value.address"
+        v-model="state.address"
         placeholder="Your address"
         autocomplete="off"
       />

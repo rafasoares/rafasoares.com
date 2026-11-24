@@ -6,6 +6,9 @@ allowBuilds:
   unrs-resolver: true
   vue-demi: true
 
+minimumReleaseAgeExclude:
+    - nuxt-email-renderer@4.1.1
+
 supportedArchitectures:
   os:
     - current

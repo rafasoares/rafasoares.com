@@ -3,6 +3,7 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[] = [
   { label: 'About', to: '/about' },
+  { label: 'Contact', to: '/contact' },
 ]
 </script>
 
@@ -12,7 +13,10 @@ const items: NavigationMenuItem[] = [
       <icon name="i-tabler-home" />
     </template>
 
-    <u-navigation-menu :items />
+    <u-navigation-menu
+      variant="link"
+      :items
+    />
 
     <template #right>
       <u-color-mode-button />

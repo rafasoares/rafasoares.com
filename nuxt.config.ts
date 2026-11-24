@@ -11,9 +11,9 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
 
-    '@regle/nuxt',
     'vite-doctor/nuxt',
     'nuxt-skill-hub',
+    'nuxt-email-renderer',
   ],
 
   devtools: {
@@ -35,6 +35,14 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+
+  runtimeConfig: {
+    postmarkServerToken: '',
+    senderEmail: 'noreply@rafasoares.com',
+    public: {
+      contactEmail: 'info@rafasoares.com',
+    },
+  },
 
   routeRules: {
     '/': { prerender: true },

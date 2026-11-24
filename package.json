@@ -21,16 +21,17 @@
     "@nuxt/icon": "2.6.2",
     "@nuxt/image": "2.2.1",
     "@nuxt/ui": "^4.12.0",
-    "@regle/core": "^1.29.5",
-    "@regle/nuxt": "^1.29.5",
-    "@regle/rules": "^1.29.5",
     "@vueuse/nuxt": "^15.0.0",
     "better-sqlite3": "^13.2.0",
     "nuxt": "^4.6.4",
+    "nuxt-email-renderer": "4.1.1",
+    "postmark": "^5.1.1",
     "tailwindcss": "^4.3.5",
-    "vue": "^3.5.45"
+    "vue": "^3.5.45",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
     "@nuxt/eslint": "^1.17.0",
     "eslint": "^10.15.0",
     "nuxt-skill-hub": "0.3.3",
